@@ -14,10 +14,14 @@ public class PlayerController : MonoBehaviour
 
     private bool canDoubleJump;
 
+    private Animator anim;
+    private SpriteRenderer theSR;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        theSR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -47,5 +51,18 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        if(theRB.velocity.x < 0)
+        {
+            theSR.flipX = true;
+        }
+        else if( theRB.velocity.x > 0)
+        {
+            theSR.flipX = false;
+        }
+
+        anim.SetFloat("moveSpeed", Mathf.Abs(moveSpeed * Input.GetAxis("Horizontal")));
+        anim.SetBool("isGrounded", isGrounded);
+
     }
 }
