@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(groundCheckPoint.position, .2f, whatIsGround);
 
+        //handles the jumping
         if (isGrounded)
         {
             canDoubleJump = true;
@@ -51,7 +52,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
+        // the character faces the right way when moving
         if(theRB.velocity.x < 0)
         {
             theSR.flipX = true;
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour
             theSR.flipX = false;
         }
 
+        // tranistion between jump animation and other animation
         anim.SetFloat("moveSpeed", Mathf.Abs(moveSpeed * Input.GetAxis("Horizontal")));
         anim.SetBool("isGrounded", isGrounded);
 
