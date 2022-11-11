@@ -8,24 +8,36 @@ public class CameraControll : MonoBehaviour
 
     public Transform farBackground, middleBackground;
 
-    private float lastXPos;
+    public float minHeight, maxHeight;
+
+    //private float lastXPos;
+    private Vector2 lastPos;
+
     // Start is called before the first frame update
     void Start()
     {
-        lastXPos = transform.position.x;
+        //lastXPos = transform.position.x;
+        lastPos = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.position.x, transform.position.y, transform.position.z);
+        //transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
 
-        float amountToMoveX = transform.position.x - lastXPos;
+        ////make sure vertical position doesn't go too far to show the upper and lower boundries of the level.
+        //float clampedY = Mathf.Clamp(transform.position.y, minHeight, maxHeight);
+        //transform.position = new Vector3(transform.position.x, clampedY, transform.position.z);
 
-        farBackground.position = transform.position + new Vector3(amountToMoveX, 0f, 0f);
+        transform.position = new Vector3(target.position.x, Mathf.Clamp(target.position.y, minHeight, maxHeight), transform.position.z);
 
-        middleBackground.position += new Vector3(amountToMoveX * 0.5f, 0f, 0f);
+        //float amountToMoveX = transform.position.x - lastXPos;
+        Vector2 amountToMove = new Vector2(transform.position.x - lastPos.x, transform.position.y - lastPos.y);
 
-        lastXPos = transform.position.x;
+        farBackground.position = transform.position + new Vector3(amountToMove.x, amountToMove.y, 0f);
+
+        middleBackground.position += new Vector3(amountToMove.x, amountToMove.y, 0f) * 0.5f;
+
+        lastPos = transform.position;
     }
 }
