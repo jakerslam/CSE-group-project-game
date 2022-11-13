@@ -66,10 +66,10 @@ GameObject:
   - component: {fileID: 5673460386042902743}
   - component: {fileID: 5673460386042902744}
   - component: {fileID: 5673460386042902745}
-  - component: {fileID: 5673460386042902746}
+  - component: {fileID: 1930633755}
   m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,7 +218,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5673460386042902746
+--- !u!114 &1930633755
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -227,6 +227,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5673460386042902739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00c2b99f34a1c45b79a4c8b8efd6af56, type: 3}
+  m_Script: {fileID: 11500000, guid: e270d95e39449bd43a3c107ce3d3b807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 3
+  invincibleLength: 1
