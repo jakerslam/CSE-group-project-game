@@ -9,6 +9,8 @@ public class PlayerLife : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
 
+    public static PlayerLife instance;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -25,13 +27,13 @@ public class PlayerLife : MonoBehaviour
         }
     }
 
-    private void Die()
+    public void Die()
     {
         rb.bodyType = RigidbodyType2D.Static;
         anim.SetTrigger("death");
     }
 
-    private void RestartLevel(){
+    public void RestartLevel(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

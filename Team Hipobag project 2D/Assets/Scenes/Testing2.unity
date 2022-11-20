@@ -2088,7 +2088,7 @@ GameObject:
   - component: {fileID: 820007971}
   m_Layer: 0
   m_Name: Spike
-  m_TagString: Untagged
+  m_TagString: trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2287,6 +2287,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1700360497}
+    - target: {fileID: 7808795106136834698, guid: 767dd1e5ff17b87489139cee7023a1b9, type: 3}
+      propertyPath: minHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7808795106136834698, guid: 767dd1e5ff17b87489139cee7023a1b9, type: 3}
       propertyPath: farBackground
       value: 

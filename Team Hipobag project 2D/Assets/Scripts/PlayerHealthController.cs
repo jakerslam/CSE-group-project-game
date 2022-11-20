@@ -48,14 +48,16 @@ public class PlayerHealthController : MonoBehaviour
 
             if(currentHealth <= 0)
             {
-            currentHealth = 0;
-            gameObject.SetActive(false);
+                currentHealth = 0;
+                gameObject.SetActive(false);
+                //PlayerLife.instance.Die();
+                PlayerLife.instance.RestartLevel();
             }
             else
             {
-            invincibleCount = invincibleLength;
+                invincibleCount = invincibleLength;
 
-            theSR.color = new Color(theSR.color.r, theSR.color.g, theSR.color.b,  0.5f);
+                theSR.color = new Color(theSR.color.r, theSR.color.g, theSR.color.b,  0.5f);
 
             }
         }
