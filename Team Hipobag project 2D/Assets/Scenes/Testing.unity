@@ -445,7 +445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a94088230b64b89af22e64e6556656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 1
+  walkSpeed: 0
   mustPatrol: 0
   rb: {fileID: 0}
 --- !u!4 &1808297902 stripped
