@@ -240,17 +240,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: spikes (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3471121249473338369, guid: 0635acd966c3e48498265a8b0436291f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3471121249473338369, guid: 0635acd966c3e48498265a8b0436291f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1135581763
+      objectReference: {fileID: 0}
     - target: {fileID: 3471121249473338370, guid: 0635acd966c3e48498265a8b0436291f, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3471121249473338370, guid: 0635acd966c3e48498265a8b0436291f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.536309
+      value: 28.22
       objectReference: {fileID: 0}
     - target: {fileID: 3471121249473338370, guid: 0635acd966c3e48498265a8b0436291f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.82479966
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 3471121249473338370, guid: 0635acd966c3e48498265a8b0436291f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -376,6 +384,7 @@ GameObject:
   - component: {fileID: 1796528630}
   - component: {fileID: 1796528629}
   - component: {fileID: 1796528631}
+  - component: {fileID: 1796528632}
   m_Layer: 0
   m_Name: Eagle
   m_TagString: trap
@@ -540,6 +549,26 @@ CapsuleCollider2D:
   m_Offset: {x: -0.09, y: -0.03}
   m_Size: {x: 0.94, y: 1.68}
   m_Direction: 0
+--- !u!95 &1796528632
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796528624}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 876029c23c58e49f29673a50a7fb2668, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1808297902 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3471121249473338370, guid: 0635acd966c3e48498265a8b0436291f, type: 3}
