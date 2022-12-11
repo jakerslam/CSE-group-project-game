@@ -14,25 +14,19 @@ public class EnemyMove : MonoBehaviour
     float startChargeTime;
     bool charging = false;
     Rigidbody2D enemyRB;
-    Animator enemyAC;
+
+
     // Start is called before the first frame update
     void Start()
     {
         enemyTransform = GetComponent<Transform>();
         enemyRB = GetComponent<Rigidbody2D>();
-        enemyAC = GetComponentInChildren<Animator>();
+     
     }
     // Update is called once per frame
     void Update()
     {
-        if(Time.time > nextFlipChance)
-        {
-            if(Random.Range(0,10) >= 5)
-            {
-                flipFacing();
-            }
-            nextFlipChance = Time.time + flipTime;
-        }
+        
         if(charging && Time.time > startChargeTime && enemyRB.velocity.x < maxSpeed)
         {
             if(!facingRight)
@@ -43,7 +37,7 @@ public class EnemyMove : MonoBehaviour
             {
                 enemyRB.AddForce(new Vector2(1f, 0f) * enemyAccel);
             }
-            enemyAC.SetBool("isCharging", charging);
+          
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -77,7 +71,6 @@ public class EnemyMove : MonoBehaviour
             canFlip = true;
             charging = false;
             enemyRB.velocity = new Vector2(0f, 0f);
-            enemyAC.SetBool("isCharging", charging);
         }
     }
     void flipFacing()
